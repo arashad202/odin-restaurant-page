@@ -3,7 +3,7 @@ import restaurantImage from "../assets/restaurant-pic.jpg"
 export function HomepageContent() {
     // Container div
     const container = document.createElement('div');
-    container.classList.add('w-[50%]', 'mx-auto');
+    container.classList.add('w-[40%]', 'mx-auto');
     // image
     const image = document.createElement('img');
     image.src = restaurantImage;
