@@ -2,7 +2,6 @@ import pizza from "../assets/pizza.jpg";
 import burger from "../assets/burger.jpg";
 import pasta from "../assets/pasta.jpg";
 import salad from "../assets/salad.jpg";
-import { list } from "postcss";
 
 export function MenuContent(document) {
 

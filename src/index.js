@@ -1,6 +1,7 @@
 import "./styles.css";
 import { HomepageContent } from "./modules/homepage.js";
-import { MenuContent } from "./modules/menu.js"
+import { MenuContent } from "./modules/menu.js";
+import { AboutContent} from "./modules/about.js";
 
 const content = document.querySelector('#content');
 const homeBtn = document.querySelector("#homepage");
@@ -12,14 +13,6 @@ document.addEventListener('DOMContentLoaded',() => {
     const homepage = HomepageContent(document);
     content.appendChild(homepage);
 });
-
-
-// remove all children of an element
-// function removeAllChildren(container) {
-//     while (container.firstChild) {
-//         container.removeChild(container.firstChild);
-//     }
-// }
 
 // Remove all children of content and append the homepage
 homeBtn.addEventListener('click', () => {
@@ -39,7 +32,8 @@ menuBtn.addEventListener('click', () => {
 aboutBtn.addEventListener('click', () => {
     //removeAllChildren(content);
     content.replaceChildren();
-    content.appendChild(document.createElement('div'));
+    const aboutPage = AboutContent(document);
+    content.appendChild(aboutPage);
 })
 
 
