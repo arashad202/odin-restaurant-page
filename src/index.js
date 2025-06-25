@@ -14,26 +14,29 @@ document.addEventListener('DOMContentLoaded',() => {
 
 
 // remove all children of an element
-function removeAllChildren(container) {
-    while (container.firstChild) {
-        container.removeChild(container.firstChild);
-    }
-}
+// function removeAllChildren(container) {
+//     while (container.firstChild) {
+//         container.removeChild(container.firstChild);
+//     }
+// }
 
 // Remove all children of content and append the homepage
 homeBtn.addEventListener('click', () => {
-    removeAllChildren(content);
+    //removeAllChildren(content);
+    content.replaceChildren();
     const homepage = HomepageContent();
     content.appendChild(homepage);
 });
 
 menuBtn.addEventListener('click', () => {
-    removeAllChildren(content);
+    //removeAllChildren(content);
+    content.replaceChildren();
     content.appendChild(document.createElement('div'));
 });
 
 aboutBtn.addEventListener('click', () => {
-    removeAllChildren(content);
+    //removeAllChildren(content);
+    content.replaceChildren();
     content.appendChild(document.createElement('div'));
 })
 
