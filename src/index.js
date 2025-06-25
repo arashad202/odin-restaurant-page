@@ -1,5 +1,6 @@
 import "./styles.css";
 import { HomepageContent } from "./modules/homepage.js";
+import { MenuContent } from "./modules/menu.js"
 
 const content = document.querySelector('#content');
 const homeBtn = document.querySelector("#homepage");
@@ -8,7 +9,7 @@ const aboutBtn = document.querySelector('#about');
 
 // default to homepage content
 document.addEventListener('DOMContentLoaded',() => {
-    const homepage = HomepageContent();
+    const homepage = HomepageContent(document);
     content.appendChild(homepage);
 });
 
@@ -24,14 +25,15 @@ document.addEventListener('DOMContentLoaded',() => {
 homeBtn.addEventListener('click', () => {
     //removeAllChildren(content);
     content.replaceChildren();
-    const homepage = HomepageContent();
+    const homepage = HomepageContent(document);
     content.appendChild(homepage);
 });
 
 menuBtn.addEventListener('click', () => {
     //removeAllChildren(content);
     content.replaceChildren();
-    content.appendChild(document.createElement('div'));
+    const menuPage = MenuContent(document);
+    content.appendChild(menuPage);
 });
 
 aboutBtn.addEventListener('click', () => {

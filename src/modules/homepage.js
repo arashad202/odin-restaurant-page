@@ -1,6 +1,6 @@
 import restaurantImage from "../assets/restaurant-pic.jpg"
 
-export function HomepageContent() {
+export function HomepageContent(document) {
     // Container div
     const container = document.createElement('div');
     container.classList.add('w-[40%]', 'mx-auto');
