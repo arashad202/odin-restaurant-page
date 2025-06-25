@@ -7,23 +7,33 @@ const menuBtn = document.querySelector("#menu");
 const aboutBtn = document.querySelector('#about');
 
 // default to homepage content
-const homepage = HomepageContent();
-content.appendChild(homepage);
+document.addEventListener('DOMContentLoaded',() => {
+    const homepage = HomepageContent();
+    content.appendChild(homepage);
+});
 
 
+// remove all children of an element
+function removeAllChildren(container) {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+}
+
+// Remove all children of content and append the homepage
 homeBtn.addEventListener('click', () => {
-    content.removeChild(content.firstChild);
+    removeAllChildren(content);
     const homepage = HomepageContent();
     content.appendChild(homepage);
 });
 
 menuBtn.addEventListener('click', () => {
-    content.removeChild(content.firstChild);
+    removeAllChildren(content);
     content.appendChild(document.createElement('div'));
 });
 
 aboutBtn.addEventListener('click', () => {
-    content.removeChild(content.firstChild);
+    removeAllChildren(content);
     content.appendChild(document.createElement('div'));
 })
 
